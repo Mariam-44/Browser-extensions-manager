@@ -88,6 +88,7 @@ function displayCards(cards) {
                   <input
                     type="checkbox"
                      data-index="${index}"
+                      aria-label="Toggle extension active state"
                     class="toggle border-neutral-600/50 bg-neutral-600/50 text-white checked:dark:border-red-400/90 checked:border-red-600/90 checked:dark:bg-red-400/90 checked:bg-red-600/90 py-0 checked:py-0 checked:hover:bg-red-400 checked:hover:border-red-400 checked:dark:hover:bg-red-500/90 checked:dark:hover:border-red-500/90"
                     ${card.isActive ? "checked" : ""} 
                     />
