@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="./dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section class="dark:bg-dark min-h-screen bg-light">
+      <div class="container mx-auto pt-10 p-3">
+        <nav
+          class="dark:bg-neutral-800 bg-neutral-0 flex items-center justify-between p-3 px-4 rounded-2xl"
+        >
+          <div class="logo">
+            <img
+              src="./assets/images/logo.svg"
+              class="hidden dark:inline"
+              alt=""
+            />
+            <img
+              src="./assets/images/light-logo.svg"
+              class="inline dark:hidden"
+              alt=""
+            />
+          </div>
+          <button id="theme-toggle" class="theme dark:bg-neutral-700 dark:hover:bg-neutral-600 hover:bg-neutral-300/60 bg-neutral-300/30 cursor-pointer p-2 rounded-md">
+
+            <img
+              src="./assets/images/icon-sun.svg"
+              alt=""
+              class="hidden dark:inline w-5"
+            />
+            <img
+              src="./assets/images/icon-moon.svg"
+              class="inline dark:hidden  w-5"
+              alt=""
+            />
+        
+          </button>
+         
+        </nav>
+
+        <div class="section-content py-16">
+          <div
+            class="filters flex flex-col md:flex-row items-center justify-between"
+          >
+            <h2 class="dark:text-white text-neutral-800 text-3xl font-bold">
+              Extensions List
+            </h2>
+
+            <div class="flex flex-wrap pt-4 md:pt-0 justify-center gap-2">
+              <button class="filter-btn active text-lg md:text-base px-4">All</button>
+              <button class="filter-btn text-lg md:text-base">Active</button>
+              <button class="filter-btn text-lg md:text-base">Inactive</button>
+            </div>
+          </div>
+
+          <div class="cards grid grid-cols-12 pt-8 gap-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>

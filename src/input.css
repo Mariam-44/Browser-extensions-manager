@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  button:focus {
+    @apply outline outline-2 outline-neutral-0 ring-[3px] ring-red-400 bg-neutral-300/20 border-0 !important;
+  }
+  .dark button:focus {
+    @apply outline outline-2 outline-neutral-900 ring-[3px] ring-red-400 bg-neutral-600 !important;
+  }
+  button.active:focus{
+     @apply bg-red-600 dark:bg-red-400 !important;
+  }
+    input.toggle:focus {
+    @apply outline outline-2 outline-neutral-100 dark:outline-neutral-900 ring-[3px] ring-red-400 !important;
+  }
+
+}
+@layer components{
+  .filter-btn {
+    @apply px-3 py-1 text-sm rounded-full border 
+           bg-white text-neutral-800 
+           dark:bg-neutral-700 dark:text-neutral-200
+           dark:border-neutral-600/60 border-neutral-300/60;
+  }
+
+  .filter-btn:not(.active){
+    @apply hover:bg-neutral-300/20 hover:border-neutral-300/20 dark:hover:bg-neutral-600
+  }
+  .filter-btn.active {
+    @apply bg-red-600 text-neutral-100 font-medium 
+    dark:bg-red-400 dark:text-neutral-700 dark:hover:bg-red-500
+  }
+  
+}
+
